@@ -10,6 +10,10 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.22",
+    "@heroicons/vue": "^2.1.5",
+    "@lucien144/vue3-parallaxy": "^0.1.2",
+    "headlessui": "^0.0.0",
     "pinia": "^2.2.0",
     "pinia-plugin-persist": "^1.0.0",
     "vue": "^3.4.29",
@@ -18,8 +22,12 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
+    "postcss": "^8.4.40",
+    "sass": "^1.77.8",
+    "tailwindcss": "^3.4.7",
     "vite": "^5.3.1",
     "vite-plugin-vue-devtools": "^7.3.1"
   }
