@@ -13,6 +13,7 @@
     "@headlessui/vue": "^1.7.22",
     "@heroicons/vue": "^2.1.5",
     "@lucien144/vue3-parallaxy": "^0.1.2",
+    "dotenv": "^16.4.5",
     "headlessui": "^0.0.0",
     "pinia": "^2.2.0",
     "pinia-plugin-persist": "^1.0.0",
