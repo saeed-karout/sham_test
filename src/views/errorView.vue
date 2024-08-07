@@ -1,7 +1,7 @@
 <template>
 
     <main
-        class="grid min-h-full place-items-center bg-cover bg-center bg-no-repeat bg-fixed bg-white px-6 py-24 sm:py-32 lg:px-8"
+        class="grid h-full place-items-center bg-cover bg-center bg-no-repeat bg-fixed bg-white px-6 py-24 sm:py-32 lg:px-8"
         style="background-image: url('https://images.unsplash.com/photo-1470847355775-e0e3c35a9a2c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1825&q=80');">
         <div class="text-center bg-white bg-opacity-75 p-8 rounded-lg">
             <p class="text-base font-semibold text-indigo-600">404</p>
