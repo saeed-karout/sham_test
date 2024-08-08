@@ -1,34 +1,39 @@
 <script setup>
-import {  RouterView } from 'vue-router'
-import NavbarComponent from './components/NavbarComponent.vue';
-import FooterComponent from './components/FooterComponent.vue';
-import LandingScreen from '@/components/LandingScreen.vue';
+    import {
+        RouterView
+    } from 'vue-router'
+    import NavbarComponent from './components/NavbarComponent.vue';
+    import FooterComponent from './components/FooterComponent.vue';
+    import LandingScreen from '@/components/LandingScreen.vue';
 
 
 
-import { ref, onMounted } from 'vue';
+    import {
+        ref,
+        onMounted
+    } from 'vue';
 
 
 
-const showLoadingScreen = ref(true);
+    const showLoadingScreen = ref(true);
 
-onMounted(() => {
-  setTimeout(() => {
-    showLoadingScreen.value = false;
-  }, 3000);
-});
+    onMounted(() => {
+        setTimeout(() => {
+            showLoadingScreen.value = false;
+        }, 3000);
+    });
 </script>
 
 <template>
     <div v-if="showLoadingScreen">
-    <LandingScreen />
-  </div>
+        <LandingScreen />
+    </div>
 
-  <div v-else>
-  <NavbarComponent />
+    <div v-else>
+        <NavbarComponent />
 
-    <RouterView />
+        <RouterView />
 
-  <FooterComponent />
-  </div>
+        <FooterComponent />
+    </div>
 </template>

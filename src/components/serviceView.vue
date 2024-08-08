@@ -1,9 +1,9 @@
  <template>
-     <section id="new-features" class="pb-8 bg-white sm:pb-10  lg:py-10">
+     <section id="new-features" class="pb-8 bg-white sm:pb-10   lg:py-10">
          <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
              <div class="text-center">
 
-                 <h2 class="text-3xl font-bold leading-tight sm:text-4xl xl:text-5xl" style="color: #B99269;">
+                 <h2 class="text-3xl font-bold leading-tight sm:text-4xl   xl:text-5xl" style="color: #B99269; padding-top: 50px;">
                      Our Services
                  </h2>
 
