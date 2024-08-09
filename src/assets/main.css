@@ -2,3 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 /* or in your `app.css` file */
+body {
+  background-image: url('../assets/bg.png');
+  background-size: cover; 
+  background-repeat: repeat; 
+  background-attachment: fixed; 
+  background-position: center; 
+
+
+
+  /* scroll */
+    --sb-track-color: #c7a887;
+  --sb-thumb-color: #314351;
+  --sb-size: 5px;
+}
+
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+  border: 8px solid #34505d;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
+}
+
+@media (max-width : 800px) {
+   body {
+  background-image: url('../assets/bg-mobile.png');
+  background-size: cover; 
+  background-repeat: repeat; 
+  background-attachment: fixed; 
+  background-position: center; 
+  
+}
+}

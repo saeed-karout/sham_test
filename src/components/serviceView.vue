@@ -1,5 +1,45 @@
+ 
+ <script>
+     import {
+         // eslint-disable-next-line no-unused-vars
+         FwbCard
+     } from 'flowbite-vue';
+    
+     export default {
+         data() {
+             return {
+                 features: [], // To hold the API data
+                 isModalOpen: false,
+                 selectedFeature: {},
+                 
+             };
+         },
+         methods: {
+             async fetchFeatures() {
+                 try {
+                     const response = await fetch('https://dummyjson.com/products?limit=9');
+                     const data = await response.json();
+                     this.features = data.products; // Adjust according to the API response structure
+                 } catch (error) {
+                     console.error('Error fetching features:', error);
+                 }
+             },
+             openModal(feature) {
+                 this.selectedFeature = feature;
+                 this.isModalOpen = true;
+             },
+             closeModal() {
+                 this.isModalOpen = false;
+                 this.selectedFeature = {};
+             }
+         },
+         created() {
+             this.fetchFeatures();
+         }
+     }
+ </script>
  <template>
-     <section id="new-features" class="pb-8 bg-white sm:pb-10   lg:py-10">
+     <section id="new-features" class="pb-8  sm:pb-10 dark:bg-gray-800 dark:opacity-80  lg:py-10">
          <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
              <div class="text-center">
 
@@ -7,13 +47,13 @@
                      Our Services
                  </h2>
 
-                 <hr class="my-4 mt-8 border-t-2 border-gray-300 w-1/3 mx-auto">
+                 <hr class="my-4 mt-8 border-t-2 border-gray-300 dark:border-yellow-500 w-1/3 mx-auto">
 
              </div>
 
 
 
-             <div class="grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 md:grid-cols-3 xl:mt-24 ">
+             <div class="grid grid-cols-1 mt-10 text-center sm:mt-16  sm:grid-cols-2 md:grid-cols-3 xl:mt-24 ">
 
                  <div v-for="feature in features" :key="feature.id"
                      class="p-4 flex flex-col justify-center items-center relative cursor-pointer"
@@ -68,43 +108,6 @@
  </template>
 
 
- <script>
-     import {
-         // eslint-disable-next-line no-unused-vars
-         FwbCard
-     } from 'flowbite-vue'
-     export default {
-         data() {
-             return {
-                 features: [], // To hold the API data
-                 isModalOpen: false,
-                 selectedFeature: {},
-             };
-         },
-         methods: {
-             async fetchFeatures() {
-                 try {
-                     const response = await fetch('https://dummyjson.com/products?limit=9');
-                     const data = await response.json();
-                     this.features = data.products; // Adjust according to the API response structure
-                 } catch (error) {
-                     console.error('Error fetching features:', error);
-                 }
-             },
-             openModal(feature) {
-                 this.selectedFeature = feature;
-                 this.isModalOpen = true;
-             },
-             closeModal() {
-                 this.isModalOpen = false;
-                 this.selectedFeature = {};
-             }
-         },
-         created() {
-             this.fetchFeatures();
-         }
-     }
- </script>
 
 
  <style scoped>
@@ -119,7 +122,7 @@
 
      /* Borders between columns */
      .grid>div:not(:nth-child(3n)) {
-         border-right: 1px solid #e5e7eb;
+         border-right: 1px solid #B99269;
          /* Tailwind's gray-200 */
      }
 
@@ -130,7 +133,7 @@
 
      /* Add borders between rows */
      .grid>div {
-         border-bottom: 1px solid #e5e7eb;
+         border-bottom: 1px solid #B99269;
          /* Tailwind's gray-200 */
      }
 
@@ -138,4 +141,7 @@
      .grid>div:nth-last-child(-n+3) {
          border-bottom: none;
      }
+
+
+ 
  </style>

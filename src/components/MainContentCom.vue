@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-1 items-center justify-center border-t   bg-white " style="margin-top: 100px;">
+  <div class="flex flex-1 items-center justify-center border-t   " style="margin-top: 100px;">
     <div class="relative w-80 h-80 perspective">
      
          <div class="w-full h-full transition-transform duration-500 transform-style preserve-3d" :class="{ 'rotate-y-180': isFlipped }" @mouseenter="isFlipped = true" @mouseleave="isFlipped = false">
-           <div class="absolute w-full h-full backface-hidden">
+           <div class="absolute w-full h-full ">
              <img :src="selectedProduct.thumbnail" alt="Product Image" class="w-full h-full object-cover rounded-lg shadow-lg" />
            </div>
            <div class="absolute w-full h-full bg-white text-black backface-hidden rotate-y-180 rounded-lg shadow-lg flex flex-col items-center justify-center p-4">

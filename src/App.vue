@@ -29,7 +29,7 @@
         <LandingScreen />
     </div>
 
-    <div v-else>
+    <div   v-else>
         <NavbarComponent />
 
         <RouterView />

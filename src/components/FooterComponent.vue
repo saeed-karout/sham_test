@@ -1,5 +1,5 @@
 <template>
-  <footer class="w-full ">
+  <footer class="w-full  dark:bg-gray-800 dark:opacity-80 ">
         <div class="mx-auto max-w-7xl border-t border-gray-200 px-4 sm:px-6 lg:px-8">
             
             <div class="flex justify-between flex-col py-8 min-[500px]:py-14 gap-8 min-[500px]:gap-16 lg:gap-0 lg:flex-row">
@@ -15,7 +15,7 @@
 
                       <div class="block">
                           <h4
-                              class="text-lg text-gray-900 font-medium mb-4 min-[500px]:mb-7 text-center min-[500px]:text-left">
+                              class="text-lg text-gray-900 font-medium dark:text-gray-300 mb-4 min-[500px]:mb-7 text-center min-[500px]:text-left">
                               Products</h4>
                           <ul class="grid gap-4 min-[500px]:gap-6 text-center min-[500px]:text-left">
                               <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900">Figma UI System</a>
@@ -29,7 +29,7 @@
                       </div>
                       <div class="block">
                           <h4
-                              class="text-lg text-gray-900 font-medium mb-4 min-[500px]:mb-7 text-center min-[500px]:text-left">
+                              class="text-lg text-gray-900 font-medium mb-4 dark:text-gray-300  min-[500px]:mb-7 text-center min-[500px]:text-left">
                               Resources</h4>
                           <ul class="grid gap-4 min-[500px]:gap-6 text-center min-[500px]:text-left">
                               <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900">FAQs</a></li>

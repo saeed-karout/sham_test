@@ -10,13 +10,9 @@ export default {
      'node_modules/flowbite-vue/**/*.{js,jsx,ts,tsx,vue}',
     'node_modules/flowbite/**/*.{js,jsx,ts,tsx}'
   ],
+  darkMode: 'class', // أو 'media' إذا كنت تريد التفعيل بناءً على تفضيلات النظام
   theme: {
-    extend: {
-      colors: {
-        primary: '#B99269',
-        secondary: '#5CBBF6',
-      },
-    },
+    extend: {},
   },
   plugins: [
     tailwindcss(),
@@ -25,4 +21,6 @@ export default {
     // eslint-disable-next-line no-undef
     require('flowbite/plugin'),
   ],
+
+  
 };

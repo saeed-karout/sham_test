@@ -1,41 +1,54 @@
 <template>
-  <div class="text-center mt-20">
-    <h2 class="text-3xl font-bold leading-tight sm:text-4xl xl:text-5xl" style="color: #B99269;">
-      Our Projects
-    </h2>
-    <hr class="my-4 mt-8 border-t-2 border-gray-300 w-1/3 mx-auto">
-  </div>
 
-  <section class="flex flex-col lg:h-vh justify-center items-center">
-    <div class="flex overflow-hidden w-full max-w-screen-lg relative">
-      <div class="flex transition-transform duration-800" :style="{ transform: `translateX(-${currentIndex * 80 / imagesToShow}%)` }">
-        <div
-          v-for="(image, index) in extendedImages"
-          :key="index"
-          class="relative flex flex-col items-center m-1 transition ease-in-out duration-500 shrink-0 w-1/6 "
-        >
-          <article
-            class="mx-auto rounded-3xl overflow-hidden bg-cover ring-2 ring-inset ring-white/50 bg-center min-h-100 relative transform duration-500 group"
-            :style="{ backgroundImage: `url(${image.src})` }"
-          >
-            <div class="relative h-full group-hover:bg-opacity-0 min-h-150 flex flex-wrap flex-col pt-[30rem] md:pt-[22rem] transform duration-500">
-              <div class="group-hover:bg-black/30 duration-500 group-hover:backdrop-blur p-8 lg:p-10 h-full justify-end flex flex-col">
-                <p class="opacity-0 text-white text-sm 2xl:text-lg group-hover:opacity-80 transform duration-500">
-                  {{ image.description }}
-                </p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-      <button @click="prevSlide" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 rounded-full z-10">‹</button>
-      <button @click="nextSlide" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 rounded-full z-10">›</button>
+  <div class="dark:bg-gray-800 dark:opacity-80">
+
+
+    <div class="text-center pt-20  ">
+      <h2 class="text-3xl font-bold leading-tight sm:text-4xl xl:text-5xl" style="color: #B99269;">
+        Our Projects
+      </h2>
+                     <hr class="my-4 mt-8 border-t-2 border-gray-300 dark:border-yellow-500 w-1/3 mx-auto">
+
     </div>
-  </section>
+  
+    <section class="flex flex-col lg:h-vh justify-center items-center">
+      <div class="flex overflow-hidden w-full max-w-screen-lg relative">
+        <div class="flex transition-transform duration-800" :style="{ transform: `translateX(-${currentIndex * 80 / imagesToShow}%)` }">
+          <div
+            v-for="(image, index) in extendedImages"
+            :key="index"
+            class="relative flex flex-col items-center m-1 transition ease-in-out duration-500 shrink-0 w-1/6 "
+          >
+            <article
+              class="mx-auto rounded-3xl overflow-hidden bg-cover ring-2 ring-inset ring-white/50 bg-center min-h-100 relative transform duration-500 group"
+              :style="{ backgroundImage: `url(${image.src})` }"
+            >
+              <div class="relative h-full group-hover:bg-opacity-0 min-h-150 flex flex-wrap flex-col pt-[30rem] md:pt-[22rem] transform duration-500">
+                <div class="group-hover:bg-black/30 duration-500 group-hover:backdrop-blur p-8 lg:p-10 h-full justify-end flex flex-col">
+                  <p class="opacity-0 text-white text-sm 2xl:text-lg group-hover:opacity-80 transform duration-500">
+                    {{ image.description }}
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button @click="prevSlide" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 rounded-full z-10">‹</button>
+        <button @click="nextSlide" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 rounded-full z-10">›</button>
+      </div>
+    </section>
+
+  </div>
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from 'vue';
+
+  
+        
+    
+
+
 
 const images = [
   {
@@ -85,7 +98,12 @@ const currentIndex = ref(0);
 
 // إنشاء قائمة ممتدة من الصور لتكرارها في البداية والنهاية
 const extendedImages = computed(() => {
-  return [...images, ...images.slice(0, imagesToShow)];
+  return [
+    ...images, ...images.slice(0, imagesToShow),
+
+      
+
+  ];
 });
 
 const nextSlide = () => {
@@ -112,5 +130,21 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Add any specific styles if needed */
+    #new-features {
+    position: relative;
+  }
+  #new-features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('@/assets/bg.png');
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: inherit;
+    opacity: 3%;  /* درجة الشفافية هنا */
+    z-index: -1;   /* للتأكد من أن الخلفية تبقى خلف المحتوى */
+  }
 </style>
