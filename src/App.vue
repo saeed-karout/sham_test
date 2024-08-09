@@ -30,7 +30,7 @@ import UpToTopCom from './components/UpToTopCom.vue';
         <LandingScreen />
     </div>
 
-    <div v-else>
+    <div v-else class=" dark:bg-gray-800 dark:opacity-80">
         <NavbarComponent />
 
         <RouterView />
