@@ -12,6 +12,7 @@
         ref,
         onMounted
     } from 'vue';
+import UpToTopCom from './components/UpToTopCom.vue';
 
 
 
@@ -29,11 +30,13 @@
         <LandingScreen />
     </div>
 
-    <div   v-else>
+    <div v-else>
         <NavbarComponent />
 
         <RouterView />
 
         <FooterComponent />
+
+        <UpToTopCom />
     </div>
 </template>

@@ -57,7 +57,7 @@
             </div>
             <div class="py-9 border-t border-gray-200">
                 <div class="flex items-center justify-center flex-col gap-8 lg:gap-0 lg:flex-row lg:justify-between">
-                    <span class="text-sm text-gray-500 ">©<a href="https://pagedone.io/">pagedone</a> 2024, All rights reserved.</span>
+                    <span class="text-sm text-gray-500 ">©<a href="https://www.shamnet.com.sa/">S.N.C Contracting</a> 2024, All rights reserved.</span>
                     <div class="flex mt-4 space-x-4 sm:justify-center sm:mt-0 ">
                         <a href="javascript:;"
                             class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-indigo-600">

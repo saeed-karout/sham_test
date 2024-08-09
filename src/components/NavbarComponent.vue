@@ -14,16 +14,21 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-16">
-        <a v-for="item in navigation" :key="item.name" :href="item.href" class="text-md font-semibold leading-6 text-gray-900 dark:text-gray-100 hover:#314351">
+        <a
+          v-for="item in navigation"
+          :key="item.name"
+          :href="item.href"
+          :class="['text-md font-semibold leading-6 hover:text-[#314351]', isActive(item.href) ? 'text-[#B99269] dark:text-[#B99269]' : 'text-gray-900 dark:text-gray-100']"
+        >
           {{ item.name }}
         </a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-6">
         <div>
-          <button @click="toggleDarkMode" class="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
-            <span v-if="isDarkMode" class="sr-only">Disable dark mode</span>
+          <button @click="darkModeStore.toggleDarkMode" class="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+            <span v-if="darkModeStore.isDarkMode" class="sr-only">Disable dark mode</span>
             <span v-else class="sr-only">Enable dark mode</span>
-            <template v-if="isDarkMode">
+            <template v-if="darkModeStore.isDarkMode">
               <SunIcon class="h-6 w-6" aria-hidden="true" />
             </template>
             <template v-else>
@@ -55,7 +60,12 @@
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10 dark:divide-gray-700">
             <div class="space-y-2 py-6">
-              <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800">
+              <a
+                v-for="item in navigation"
+                :key="item.name"
+                :href="item.href"
+                :class="['-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 dark:hover:bg-gray-800', isActive(item.href) ? 'bg-gray-200 dark:bg-gray-700' : '']"
+              >
                 {{ item.name }}
               </a>
             </div>
@@ -71,6 +81,7 @@
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'
+import { useDarkModeStore } from '@/stores/useDarkModeStore'
 import { Dialog, DialogPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from '@heroicons/vue/24/outline'
 import logoLight from '@/assets/logo_light.svg';
@@ -85,25 +96,19 @@ const navigation = [
 ]
 
 const mobileMenuOpen = ref(false)
-const isDarkMode = ref(false)
 const language = ref('EN')
 const headerClass = ref('')
 
-const toggleDarkMode = () => {
-  isDarkMode.value = !isDarkMode.value
-  if (isDarkMode.value) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
+const darkModeStore = useDarkModeStore()
+
+const logoSrc = computed(() => darkModeStore.isDarkMode ? logoLight : logoDark)
+
+// وظيفة لتحديد العنصر النشط
+const isActive = (href) => {
+  return window.location.pathname === href
 }
 
-// قم بإستيراد الصور مباشرة
-
-// استخدم computed لتغيير الرابط بناءً على الوضع الحالي
-const logoSrc = computed(() => isDarkMode.value ? logoLight :  logoDark);
-
-// Function to handle scroll and update header class
+// وظيفة لتغيير فئة الرأس (header) عند التمرير
 const handleScroll = () => {
   if (window.scrollY > 100) {
     headerClass.value = 'bg-white dark:bg-gray-800 shadow-lg'
@@ -113,39 +118,14 @@ const handleScroll = () => {
 }
 
 onMounted(() => {
+  darkModeStore.loadDarkModePreference() // تحميل التفضيل عند التحميل الأول للصفحة
   window.addEventListener('scroll', handleScroll)
-})
-
-// Check dark mode preference on page load
-const checkDarkModePreference = () => {
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    isDarkMode.value = true
-    document.documentElement.classList.add('dark')
-  } else {
-    isDarkMode.value = false
-    document.documentElement.classList.remove('dark')
-  }
-}
-
-onMounted(() => {
-  checkDarkModePreference()
-
-  // Watch for changes in the system dark mode preference
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-    isDarkMode.value = event.matches
-    if (isDarkMode.value) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  })
 })
 </script>
 
 <style scoped>
-/* أضف تأثيرات إضافية على التمرير أو الشكل هنا حسب الحاجة */
 header.bg-white {
-  background-color: #f8f9fa; /* لون الخلفية أبيض تلجي */
+  background-color: #f8f9fa;
 }
 
 header.shadow-lg {
