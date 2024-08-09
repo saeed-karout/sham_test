@@ -103,7 +103,7 @@ const darkModeStore = useDarkModeStore()
 
 const logoSrc = computed(() => darkModeStore.isDarkMode ? logoLight : logoDark)
 
-// وظيفة لتحديد العنصر النشط
+
 const isActive = (href) => {
   return window.location.pathname === href
 }
