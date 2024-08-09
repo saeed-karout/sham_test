@@ -45,7 +45,7 @@
   <style scoped>
   button.fixed {
     position: fixed;
-    background-color: #5a6974;
+    background-color: #2a353c;
     color: #b99269;
     padding: 0.75rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

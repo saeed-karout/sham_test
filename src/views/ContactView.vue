@@ -1,9 +1,13 @@
 <template>
-  <div class=" dark:bg-gray-800 dark:opacity-80 ">
+  <div >
       <form action="https://fabform.io/f/xxxxx" method="post" class="pt-10">
     
           <section class="py-20">
-              <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <h1
+                  class=" text-center mt-15 text-4xl font-bold leading-10 " style="color:#B38E60;">
+                  Contact us</h1>
+                <hr class="my-4 mt-8 border-t-2 border-gray-300 dark:border-yellow-500 w-1/3 mx-auto">
+              <div class="mx-auto max-w-7xl mt-5 px-4 sm:px-6 lg:px-8">
                   <div class="grid lg:grid-cols-2 grid-cols-1">
                       <div class="lg:mb-0 mb-10">
                           <div class="group w-full h-full">
@@ -11,9 +15,6 @@
                                   <img src="https://pagedone.io/asset/uploads/1696488602.png"
                                       alt="ContactUs tailwind section"
                                       class="w-full h-full lg:rounded-l-2xl rounded-2xl bg-blend-multiply " />
-                                  <h1
-                                      class="font-manrope  text-4xl font-bold leading-10 absolute top-11 left-11" style="color:#B38E60;">
-                                      Contact us</h1>
                                   <div class="absolute bottom-0 w-full lg:p-11 p-5">
                                       <div class="bg-white rounded-lg p-6 block">
                                           <a href="javascript:;" class="flex items-center mb-6">
@@ -96,7 +97,9 @@
                               class="w-full h-12 text-gray-600 placeholder-gray-400 bg-transparent text-lg shadow-sm font-normal leading-7 rounded-full border border-gray-200 focus:outline-none pl-4 mb-10"
                               placeholder="Message">
                           <button
-                              class="w-full h-12 text-white text-base font-semibold leading-6 rounded-full dark:bg-slate-400 dark:text-yellow-300 bg-slate-700 transition-all duration-700 hover:bg-indigo-800 shadow-sm" >Send</button>
+                              class="w-full h-12 text-white text-base font-semibold leading-6 rounded-full
+                                 bg-slate-700 transition-all duration-700 hover:bg-[#A9947E] 
+                                hover:text-[#1F2937] shadow-sm" >Send</button>
                       </div>
                   </div>
               </div>

@@ -1,6 +1,6 @@
 <template>
   <footer class="w-full  dark:bg-gray-800 dark:opacity-80 ">
-        <div class="mx-auto max-w-7xl border-t border-gray-200 px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl border-t dark:border-yellow-500 border-gray-200 px-4 sm:px-6 lg:px-8">
             
             <div class="flex justify-between flex-col py-8 min-[500px]:py-14 gap-8 min-[500px]:gap-16 lg:gap-0 lg:flex-row">
                 <div
@@ -18,12 +18,12 @@
                               class="text-lg text-gray-900 font-medium dark:text-gray-300 mb-4 min-[500px]:mb-7 text-center min-[500px]:text-left">
                               Products</h4>
                           <ul class="grid gap-4 min-[500px]:gap-6 text-center min-[500px]:text-left">
-                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900">Figma UI System</a>
+                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900 dark:text-[#A9947E]">Figma UI System</a>
                               </li>
-                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900">Icons Assets</a></li>
-                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900">Responsive Blocks</a>
+                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900 dark:text-[#A9947E]">Icons Assets</a></li>
+                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900 dark:text-[#A9947E]">Responsive Blocks</a>
                               </li>
-                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900">Components Library</a>
+                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900 dark:text-[#A9947E]">Components Library</a>
                               </li>
                           </ul>
                       </div>
@@ -32,10 +32,10 @@
                               class="text-lg text-gray-900 font-medium mb-4 dark:text-gray-300  min-[500px]:mb-7 text-center min-[500px]:text-left">
                               Resources</h4>
                           <ul class="grid gap-4 min-[500px]:gap-6 text-center min-[500px]:text-left">
-                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900">FAQs</a></li>
-                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900">Quick Start</a></li>
-                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900">Documentation</a></li>
-                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900">User Guide</a></li>
+                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900 dark:text-[#A9947E]">FAQs</a></li>
+                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900 dark:text-[#A9947E]">Quick Start</a></li>
+                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900 dark:text-[#A9947E]">Documentation</a></li>
+                              <li><a href="javascript:;" class="text-gray-600 hover:text-gray-900 dark:text-[#A9947E]">User Guide</a></li>
                           </ul>
                       </div>
 
@@ -43,7 +43,7 @@
                 </div>
                 <div class="block lg:max-w-md">
                     <h3
-                        class="font-manrope font-semibold text-2xl text-gray-900 leading-9 mb-8 text-center lg:text-left">
+                        class="font-manrope font-semibold dark:text-[#A9947E] text-2xl text-gray-900 leading-9 mb-8 text-center lg:text-left">
                         Join the newsletter and read the new posts first</h3>
                     <div
                         class=" lg:rounded-full lg:h-16 lg:p-1.5 lg:flex-row gap-6 lg:gap-0 flex-col flex items-center justify-between">
@@ -55,7 +55,7 @@
                     </div>
                 </div>
             </div>
-            <div class="py-9 border-t border-gray-200">
+            <div class="py-9 border-t dark:border-yellow-500 border-gray-200">
                 <div class="flex items-center justify-center flex-col gap-8 lg:gap-0 lg:flex-row lg:justify-between">
                     <span class="text-sm text-gray-500 ">©<a href="https://www.shamnet.com.sa/">S.N.C Contracting</a> 2024, All rights reserved.</span>
                     <div class="flex mt-4 space-x-4 sm:justify-center sm:mt-0 ">

@@ -1,5 +1,5 @@
 <template>
-    <div class="relative overflow-hidden bg-white-100 pt-16 mt-24 pb-32 space-y-24 mx-24">
+    <div class="tem relative overflow-hidden bg-white-100 pt-16 mt-24 pb-32 space-y-24 mx-24 ">
         <div class="relative">
             <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8 ">
                 <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 ">
@@ -177,3 +177,14 @@
     </div>
 
 </template>
+
+
+
+<style scoped>
+    @media (max-width:700px) {
+        .tem{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+</style>

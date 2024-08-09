@@ -1,6 +1,6 @@
 <template>
 
-  <div class="dark:bg-gray-800 dark:opacity-80">
+  <div >
 
 
     <div class="text-center pt-20  ">

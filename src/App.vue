@@ -26,11 +26,15 @@ import UpToTopCom from './components/UpToTopCom.vue';
 </script>
 
 <template>
-    <div v-if="showLoadingScreen">
-        <LandingScreen />
+    <div  v-if="showLoadingScreen">
+       
+       
+       
+       <LandingScreen />
+     
     </div>
 
-    <div v-else class=" dark:bg-gray-800 dark:opacity-80">
+    <div v-else class="dark:bg-[#1f2937f3] ">
         <NavbarComponent />
 
         <RouterView />

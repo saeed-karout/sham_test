@@ -1,6 +1,6 @@
 <template>
   <header :class="headerClass" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
-    <nav class="flex items-center justify-between p-3 lg:px-8 px-8 dark:bg-gray-800 dark:opacity-80" aria-label="Global">
+    <nav class="flex items-center justify-between p-3 lg:px-8 px-8 dark:bg-gray-800" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="/" class="min-w-40">
           <span class="sr-only">S.N.C Company</span>
@@ -18,14 +18,14 @@
           v-for="item in navigation"
           :key="item.name"
           :href="item.href"
-          :class="['text-md font-semibold leading-6 hover:text-[#314351]', isActive(item.href) ? 'text-[#B99269] dark:text-[#B99269]' : 'text-gray-900 dark:text-gray-100']"
+          :class="['text-md font-semibold leading-6 hover:text-[#314351] ', isActive(item.href) ? 'text-[#B99269] dark:text-[#B99269]' : 'text-gray-900 dark:text-gray-100']"
         >
           {{ item.name }}
         </a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-6">
         <div>
-          <button @click="darkModeStore.toggleDarkMode" class="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+          <button @click="darkModeStore.toggleDarkMode" class="text-gray-700 hover:text-gray-900  dark:text-[#B99269]">
             <span v-if="darkModeStore.isDarkMode" class="sr-only">Disable dark mode</span>
             <span v-else class="sr-only">Enable dark mode</span>
             <template v-if="darkModeStore.isDarkMode">
@@ -43,38 +43,55 @@
         </div>
       </div>
     </nav>
+
     <!-- قائمة الجوال -->
     <Dialog class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
-      <div class="fixed inset-0 z-50" />
-      <DialogPanel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-        <div class="flex items-center justify-between">
-          <a href="/" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" :src="logoSrc" alt="Company Logo" />
-          </a>
-          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-300" @click="mobileMenuOpen = false">
-            <span class="sr-only">Close menu</span>
-            <XMarkIcon class="h-6 w-6" aria-hidden="true" />
-          </button>
-        </div>
-        <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10 dark:divide-gray-700">
-            <div class="space-y-2 py-6">
-              <a
-                v-for="item in navigation"
-                :key="item.name"
-                :href="item.href"
-                :class="['-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 dark:hover:bg-gray-800', isActive(item.href) ? 'bg-gray-200 dark:bg-gray-700' : '']"
-              >
-                {{ item.name }}
-              </a>
-            </div>
-            <div class="py-6">
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800">Log in</a>
+      <transition
+        name="slide-fade"
+        mode="out-in"
+      >
+        <DialogPanel v-if="mobileMenuOpen" class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="/" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img class="h-8 w-auto" :src="logoSrc" alt="Company Logo" />
+            </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-[#B99269] dark:text-[#B99269]" @click="mobileMenuOpen = false">
+              <span class="sr-only">Close menu</span>
+              <XMarkIcon class="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10 dark:divide-gray-700">
+              <div class="space-y-2 py-6">
+                <a
+                  v-for="item in navigation"
+                  :key="item.name"
+                  :href="item.href"
+                  :class="['-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 dark:hover:bg-gray-800', isActive(item.href) ? 'bg-gray-200 dark:bg-gray-700 dark:text-[#B99269]' : 'dark:text-[#B99269]']"
+                >
+                  {{ item.name }}
+                </a>
+              </div>
+              <div class="py-6 flex justify-between">
+                <button @click="darkModeStore.toggleDarkMode" class="text-gray-700 hover:text-gray-900 dark:text-[#B99269] dark:hover:text-white">
+                  <span v-if="darkModeStore.isDarkMode" class="sr-only">Disable dark mode</span>
+                  <span v-else class="sr-only">Enable dark mode</span>
+                  <template v-if="darkModeStore.isDarkMode">
+                    <SunIcon class="h-6 w-6" aria-hidden="true" />
+                  </template>
+                  <template v-else>
+                    <MoonIcon class="h-6 w-6" aria-hidden="true" />
+                  </template>
+                </button>
+                <button @click="toggleLanguage" class="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
+                  {{ language }}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </DialogPanel>
+        </DialogPanel>
+      </transition>
     </Dialog>
   </header>
 </template>
@@ -103,10 +120,7 @@ const darkModeStore = useDarkModeStore()
 
 const logoSrc = computed(() => darkModeStore.isDarkMode ? logoLight : logoDark)
 
-
-const isActive = (href) => {
-  return window.location.pathname === href
-}
+const isActive = (href) => window.location.pathname === href
 
 // وظيفة لتغيير فئة الرأس (header) عند التمرير
 const handleScroll = () => {
@@ -130,5 +144,13 @@ header.bg-white {
 
 header.shadow-lg {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.slide-fade-enter-active, .slide-fade-leave-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
 }
 </style>

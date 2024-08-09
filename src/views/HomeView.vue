@@ -10,15 +10,17 @@ import ProjectsComponents from '@/components/ProjectsComponents.vue';
 <template>
 
   
-    <div>
+    <div >
       <Videos />
-      <Service />
-
-      
-      <ProjectsComponents />
-
-      <ContactView  />
-
+      <div class="">
+        <Service />
+        
+        
+        <ProjectsComponents />
+        
+        <ContactView  />
+        
+      </div>
     </div>
   
 </template>
