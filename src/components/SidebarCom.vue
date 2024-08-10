@@ -1,7 +1,9 @@
 <template>
-  <div class="flex flex-col items-center justify-center h-full w-64 px-5 border-r text-white ">
+  <div class="sidebar flex flex-col items-center justify-start h-full w-full lg:w-64 p-5  text-yellow-500">
     <div class="p-4 text-2xl font-bold mb-6">Services</div>
-    <nav class="w-full space-y-4 ">
+    <nav class="w-full space-y-4">
+
+    
       <button
         v-for="product in products"
         :key="product.id"
@@ -36,7 +38,17 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-button {
-  outline: none;
+.sidebar {
+  min-width: 200px;
+  flex-shrink: 0;
+  transition: all 0.3s ease-in-out;
+  margin-top: 96px;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 100%;
+    max-height: 50vh;
+  }
 }
 </style>
