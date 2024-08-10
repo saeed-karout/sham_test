@@ -15,12 +15,12 @@ import NewsCarousel from '@/components/NewsCarousel.vue';
       <Videos />
       <div class="">
         <Service />
-        <NewsCarousel />
         
         
         <ProjectsComponents />
         
         <ContactView  />
+        <NewsCarousel />
         
       </div>
     </div>
