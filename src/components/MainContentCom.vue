@@ -5,7 +5,7 @@
         <div class="absolute w-full h-full backface-hidden">
           <img :src="selectedProduct.thumbnail" alt="Product Image" class="w-full h-full object-cover rounded-lg shadow-lg" />
         </div>
-        <div class="absolute w-full h-full bg-white text-black backface-hidden rotate-y-180 rounded-lg shadow-lg flex flex-col items-center justify-center p-4">
+        <div class="absolute w-full h-full dark:bg-[#1F2937] text-black backface-hidden rotate-y-180 rounded-lg shadow-lg flex flex-col items-center justify-center p-4">
           <h1 class="text-2xl font-bold mb-4">{{ selectedProduct.title }}</h1>
           <p>{{ selectedProduct.description }}</p>
         </div>
