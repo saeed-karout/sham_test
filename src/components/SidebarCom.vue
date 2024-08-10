@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar flex flex-col items-center justify-start h-full w-full lg:w-64 p-5  text-yellow-500">
+  <div class="sidebar flex flex-col items-center justify-start h-full w-full lg:w-64 p-5  text-[#B99269]">
     <div class="p-4 text-2xl font-bold mb-6">Services</div>
     <nav class="w-full space-y-4">
 

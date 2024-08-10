@@ -1,7 +1,7 @@
 <template>
-  <div class="main-content flex-1 flex items-center justify-center ">
-    <div class="relative w-full max-w-xs h-full max-h-xs lg:max-w-md lg:max-h-md perspective">
-      <div class="w-full h-full transition-transform duration-500 transform-style preserve-3d" :class="{ 'rotate-y-180': isFlipped }" @mouseenter="isFlipped = true" @mouseleave="isFlipped = false">
+  <div class="main-content flex-1 flex items-center justify-center  ">
+    <div class="relative w-full max-w-xs  max-h-md lg:max-w-xs lg:max-h-lg perspective">
+      <div class="w-full h-auto transition-transform duration-500 transform-style preserve-3d py-24" :class="{ 'rotate-y-180': isFlipped }" @mouseenter="isFlipped = true" @mouseleave="isFlipped = false">
         <div class="absolute w-full h-full backface-hidden">
           <img :src="selectedProduct.thumbnail" alt="Product Image" class="w-full h-full object-cover rounded-lg shadow-lg" />
         </div>
