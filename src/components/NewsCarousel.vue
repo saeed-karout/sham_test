@@ -5,7 +5,7 @@
                   Our News</h1>
          <hr class="my-4 mt-8 border-t-2 border-gray-300 dark:border-yellow-500 w-1/3 mx-auto">
 
-  <div class=" w-full flex items-center justify-center  overflow-hidden mb-6">
+  <div class=" w-full flex items-baseline justify-center  overflow-hidden mb-6 ">
     <div
       class="relative lg:w-[290px] lg:h-[290px] md:w-[220px] md:h-[220px] sm:w-[180px] sm:h-[180px] w-[100px] h-[100px] [transform-style:preserve-3d] animate-rotate ">
       <span v-for="(image, index) in images" :key="index" :style="{ '--i': index + 1 }" class="span-style">
