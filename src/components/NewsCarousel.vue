@@ -83,9 +83,7 @@ const images = [
   @apply absolute top-0 left-0 w-full h-full rounded-sm object-cover transition-transform duration-[2000ms];
 }
 
-.img-style:hover {
-  @apply -translate-y-5 scale-125;
-}
+
 
 @media (min-width: 640px) {
   .img-style:hover {
