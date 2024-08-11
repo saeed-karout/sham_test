@@ -13,7 +13,7 @@ import NewsCarousel from '@/components/NewsCarousel.vue';
   
     <div >
       <Videos />
-      <div class="">
+      
         <Service />
         
         
@@ -22,7 +22,7 @@ import NewsCarousel from '@/components/NewsCarousel.vue';
         <ContactView  />
         <NewsCarousel />
         
-      </div>
+      
     </div>
   
 </template>
