@@ -1,0 +1,61 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "اعمال التشطيب",
+      "description": "Description for product 1",
+      "images": ["../src/assets/snc.jpg"],
+      "thumbnail": "thumbnail1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "الاعمال الانشائية",
+      "description": "Description for product 2",
+      "images": ["../src/assets/snc.jpg"],
+      "thumbnail": "thumbnail2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "الدراسة والتطوير ",
+      "description": "Description for product 2",
+      "images": ["../src/assets/snc.jpg"],
+      "thumbnail": "thumbnail2.jpg"
+    },
+    {
+      "id": 4,
+      "title": "الابنية الذكية ",
+      "description": "Description for product 2",
+      "images": ["../src/assets/snc.jpg"],
+      "thumbnail": "thumbnail2.jpg"
+    },
+    {
+      "id": 5,
+      "title": "اعمال الديكور",
+      "description": "Description for product 2",
+      "images": ["../src/assets/snc.jpg"],
+      "thumbnail": "thumbnail2.jpg"
+    },
+    {
+      "id": 6,
+      "title": "اعمال ومتطلبات الدفاع المدني",
+      "description": "Description for product 2",
+      "images": ["../src/assets/snc.jpg"],
+      "thumbnail": "thumbnail2.jpg"
+    },
+    {
+      "id": 7,
+      "title": "اعمال الزجاج والمرايا وابواب الشاور",
+      "description": "Description for product 2",
+      "images": ["../src/assets/snc.jpg"],
+      "thumbnail": "thumbnail2.jpg"
+    },
+    {
+      "id": 1,
+      "title": "اعمال التشطيب",
+      "description": "Description for product 1",
+      "images": ["../src/assets/snc.jpg"],
+      "thumbnail": "thumbnail1.jpg"
+    }
+    
+  ]
+}

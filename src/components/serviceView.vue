@@ -14,15 +14,13 @@
                @click="openModal(feature)">
             
             <Fwb-card img-alt="Desk" class="flex flex-col justify-center items-center" 
-                      img-src="https://flowbite.com/docs/images/blog/image-1.jpg" variant="image">
-              <img :src="feature.images[0]" class="w-52 h-48" alt="">
+                      img-src="" variant="image">
+              <img :src="feature.images[0]" class="w-72 h-48  " style="border-radius: 15px;" alt="">
               <div class="p-5">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 class="mb-2 text-lg font-bold tracking-tight text-[#304452] dark:text-[#B99269]">
                   {{ feature.title }}
                 </h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                  {{ feature.description }}
-                </p>
+                
               </div>
             </Fwb-card>
           </div>
@@ -58,7 +56,7 @@
     methods: {
       async fetchFeatures() {
         try {
-          const response = await fetch('https://dummyjson.com/products?limit=9');
+          const response = await fetch('/services.json');
           const data = await response.json();
           this.features = data.products;
         } catch (error) {
