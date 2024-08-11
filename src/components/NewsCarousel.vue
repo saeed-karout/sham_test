@@ -1,7 +1,8 @@
 <template>
-  <h1
-           class=" text-center mt-16 text-4xl font-bold leading-10 " style="color:#B38E60;">
-           News latest</h1>
+  
+          <h1
+                  class=" text-center mt-15 text-4xl font-bold leading-10 " style="color:#B38E60;">
+                  Our News</h1>
          <hr class="my-4 mt-8 border-t-2 border-gray-300 dark:border-yellow-500 w-1/3 mx-auto">
 
   <div class=" w-full flex items-center justify-center  overflow-hidden mb-6">

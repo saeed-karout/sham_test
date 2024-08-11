@@ -2,7 +2,7 @@
     <section id="new-features" class="pb-8 sm:pb-10  lg:py-10">
       <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="text-center">
-          <h2 class="text-3xl font-bold leading-tight sm:text-4xl xl:text-5xl" style="color: #B99269; padding-top: 50px;">
+          <h2 class=" font-bold leading-tight text-4xl xl:text-5xl" style="color: #B99269; padding-top: 50px;">
             Our Services
           </h2>
           <hr class="my-4 mt-8 border-t-2 border-gray-300 dark:border-yellow-500 w-1/3 mx-auto">
