@@ -58,7 +58,7 @@
         </div>
 
         <div class="group cursor-pointer relative">
-            <img src=""
+            <img src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHwxMXx8bmF0dXJlfGVufDB8MHx8fDE2OTQwOTk3Mjl8MA&ixlib=rb-4.0.3&q=80&w=1080"
                 alt="Image 1"
                 class="w-full h-48 object-cover rounded-lg transition-transform transform scale-100 group-hover:scale-105" />
             <div
