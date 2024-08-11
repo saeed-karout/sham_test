@@ -1,5 +1,5 @@
 <template>
-  <div class="main-content flex-1 flex items-center justify-center  ">
+  <div class="main-content flex-1 flex items-center justify-center  mb-20">
     <div class="relative w-full max-w-xs  max-h-md lg:max-w-xs lg:max-h-lg perspective">
       <div class="w-full h-auto transition-transform duration-500 transform-style preserve-3d py-24" :class="{ 'rotate-y-180': isFlipped }" @mouseenter="isFlipped = true" @mouseleave="isFlipped = false">
         <div class="absolute w-full h-full backface-hidden">
