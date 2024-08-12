@@ -2,10 +2,12 @@
   <header :class="headerClass" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
     <nav class="flex items-center justify-between p-3 lg:px-8 px-8 dark:bg-gray-800" aria-label="Global">
       <div class="flex lg:flex-1">
-        <a href="/" class="min-w-40">
-          <span class="sr-only">S.N.C Company</span>
-          <img :src="logoSrc" width="100" alt="Company Logo" />
-        </a>
+        <p class="min-w-40">
+          <router-link to="/">
+            <span class="sr-only">S.N.C Company</span>
+            <img :src="logoSrc" width="100" alt="Company Logo" />
+          </router-link>
+        </p>
       </div>
       <div class="flex lg:hidden">
         <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300" @click="mobileMenuOpen = true">
@@ -14,18 +16,18 @@
         </button>
       </div>
       <div class="hidden lg:flex lg:gap-x-16">
-        <a
+        <router-link
           v-for="item in navigation"
           :key="item.name"
-          :href="item.href"
-          :class="['text-md font-semibold leading-6 hover:text-[#314351] ', isActive(item.href) ? 'text-[#B99269] dark:text-[#B99269]' : 'text-gray-900 dark:text-gray-100']"
+          :to="item.href"
+          :class="['text-md font-semibold leading-6 hover:text-[#314351]', isActive(item.href) ? 'text-[#B99269] dark:text-[#B99269]' : 'text-gray-900 dark:text-gray-100']"
         >
           {{ item.name }}
-        </a>
+        </router-link>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end gap-6">
         <div>
-          <button @click="darkModeStore.toggleDarkMode" class="text-gray-700 hover:text-gray-900  dark:text-[#B99269]">
+          <button @click="darkModeStore.toggleDarkMode" class="text-gray-700 hover:text-gray-900 dark:text-[#B99269]">
             <span v-if="darkModeStore.isDarkMode" class="sr-only">Disable dark mode</span>
             <span v-else class="sr-only">Enable dark mode</span>
             <template v-if="darkModeStore.isDarkMode">
@@ -52,10 +54,10 @@
       >
         <DialogPanel v-if="mobileMenuOpen" class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div class="flex items-center justify-between">
-            <a href="/" class="-m-1.5 p-1.5">
+            <router-link to="/" class="-m-1.5 p-1.5">
               <span class="sr-only">Your Company</span>
               <img class="h-8 w-auto" :src="logoSrc" alt="Company Logo" />
-            </a>
+            </router-link>
             <button type="button" class="-m-2.5 rounded-md p-2.5 text-[#B99269] dark:text-[#B99269]" @click="mobileMenuOpen = false">
               <span class="sr-only">Close menu</span>
               <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -64,14 +66,15 @@
           <div class="mt-6 flow-root">
             <div class="-my-6 divide-y divide-gray-500/10 dark:divide-gray-700">
               <div class="space-y-2 py-6">
-                <a
+                <router-link
                   v-for="item in navigation"
                   :key="item.name"
-                  :href="item.href"
+                  :to="item.href"
+                  @click="mobileMenuOpen = false"
                   :class="['-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50 dark:hover:bg-gray-800', isActive(item.href) ? 'bg-gray-200 dark:bg-gray-700 dark:text-[#B99269]' : 'dark:text-[#B99269]']"
                 >
                   {{ item.name }}
-                </a>
+                </router-link>
               </div>
               <div class="py-6 flex justify-between">
                 <button @click="darkModeStore.toggleDarkMode" class="text-gray-700 hover:text-gray-900 dark:text-[#B99269] dark:hover:text-white">
@@ -95,6 +98,7 @@
     </Dialog>
   </header>
 </template>
+
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'
