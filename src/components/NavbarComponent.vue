@@ -105,6 +105,7 @@ import { ref, onMounted, computed } from 'vue'
 import { useDarkModeStore } from '@/stores/useDarkModeStore'
 import { Dialog, DialogPanel } from '@headlessui/vue'
 import { Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from '@heroicons/vue/24/outline'
+import { useRoute } from 'vue-router'  // استيراد useRoute
 import logoLight from '@/assets/logo_light.svg';
 import logoDark from '@/assets/logosham.svg';
 
@@ -121,12 +122,14 @@ const language = ref('EN')
 const headerClass = ref('')
 
 const darkModeStore = useDarkModeStore()
+const route = useRoute()  // استخدام useRoute
 
 const logoSrc = computed(() => darkModeStore.isDarkMode ? logoLight : logoDark)
 
-const isActive = (href) => window.location.pathname === href
+const isActive = (href) => {
+  return route.path === href;
+}
 
-// وظيفة لتغيير فئة الرأس (header) عند التمرير
 const handleScroll = () => {
   if (window.scrollY > 100) {
     headerClass.value = 'bg-white dark:bg-gray-800 shadow-lg'
@@ -136,7 +139,7 @@ const handleScroll = () => {
 }
 
 onMounted(() => {
-  darkModeStore.loadDarkModePreference() // تحميل التفضيل عند التحميل الأول للصفحة
+  darkModeStore.loadDarkModePreference()
   window.addEventListener('scroll', handleScroll)
 })
 </script>
