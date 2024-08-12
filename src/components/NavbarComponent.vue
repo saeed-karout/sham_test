@@ -4,7 +4,7 @@
       <div class="flex lg:flex-1">
         <a href="/" class="min-w-40">
           <span class="sr-only">S.N.C Company</span>
-          <img :src="logoSrc" width="90" alt="Company Logo" />
+          <img :src="logoSrc" width="100" alt="Company Logo" />
         </a>
       </div>
       <div class="flex lg:hidden">
