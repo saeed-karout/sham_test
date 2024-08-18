@@ -2,7 +2,7 @@
 
 
 
-    <h1 class=" text-center mt-15 text-4xl font-bold leading-10 " style="color:#B38E60;padding-top: 100px ; ">
+    <h1 class=" text-center mt-16 text-4xl font-bold leading-10 " style="color:#B38E60;padding-top: 100px ; ">
         Our News</h1>
     <hr class="my-4 mt-8 border-t-2 border-gray-300 dark:border-yellow-500 w-1/3 mx-auto">
 

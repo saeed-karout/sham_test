@@ -12,7 +12,7 @@ import UpToTopCom from './components/UpToTopCom.vue';
 <template>
    
 
-    <div class="dark:bg-[#1f2937f3] ">
+    <div >
         <NavbarComponent />
 
         <RouterView />

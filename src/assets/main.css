@@ -4,18 +4,29 @@
 @tailwind utilities;
 
 body {
-  background-image: url('../assets/bg-10.png');
-  
+  background-image: url('../assets/BATTREN-left-right.png');
+  background-color: #fffffdeb;
   background-size: cover; 
   background-repeat: repeat; 
   background-attachment: fixed; 
   background-position: center; 
-  font-family: "Alexandria", sans-serif;
+  font-family: "MyCustomFont", sans-serif;
 
   /* Scrollbar styles */
   --sb-track-color: #c7a887;
   --sb-thumb-color: #314351;
   --sb-size: 5px;
+}
+
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../assets/fonts/Madani\ Upright\ Variable.ttf') format('ttf'),
+        url('../assets/fonts/Madani\ Extra\ Bold\ Oblique.ttf') format('ttf'),
+       url('../assets/fonts/Madani\ Light\ Oblique.ttf') format('truetype'); 
+       ;
+  font-weight: 800;
+  
 }
 
 body::-webkit-scrollbar {
@@ -41,23 +52,27 @@ body::-webkit-scrollbar-thumb {
 
 /* Dark mode specific styles */
 .dark body {
- /* Use the same image for dark mode */
-     background-image: url('../assets/bg-dark.jpg');
+  background-color: #1f2937f3;
+  background-image: url('../assets/BATTREN-left-right.png') !important;
 }
+
 
 /* Responsive styles */
 @media (max-width: 800px) {
   body {
-    background-image: url('../assets/bg-mobile.png');
-    background-size: cover;
-    background-repeat: repeat;
+    background-image: url('../assets/pattren-mobile.png');
+    background-size: content;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    background-color: #fffffdeb;
   }
   
   /* Dark mode for mobile */
   .dark body {
-    background-image: url('../assets/bg-mobile-dark.jpg');
+  background-color: #1f2937f3;
+
+    background-image: url('../assets/pattren-mobile.png') !important;
   }
 }
 

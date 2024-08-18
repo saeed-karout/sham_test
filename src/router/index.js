@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
+import ServiceView from '@/views/ServiceView.vue'
+import ProjectComponent from '@/views/ServiceView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -17,7 +18,13 @@ const router = createRouter({
     {
       path: '/service',
       name: 'service',
-      component: () => import('../views/ServiceView.vue')
+      component: ServiceView
+    },
+    {
+      path: '/service/:selectedFeature',
+      name: 'service-detail',
+      component: ServiceView,
+      props: true
     },
     {
       path: '/contact',
@@ -29,6 +36,12 @@ const router = createRouter({
       name: 'news',
       component: () => import('../views/NewsView.vue')
     },
+    {
+      path: '/project',
+      name: 'Project',
+      component: ProjectComponent // تأكد من استخدام المكون الصحيح
+    },
+    
     {
       path: '/:pathMatch(.*)*',
       name: 'error',

@@ -1,54 +1,77 @@
 <template>
-  <div class="sidebar flex flex-col items-center justify-start h-full w-full lg:w-64 p-5  text-[#B99269]">
-    <div class="p-4 text-2xl font-bold mb-6">Services</div>
+  <div class="sidebar flex flex-col items-center justify-start h-auto w-full lg:w-64 px-3 py-5 text-[#B99269]">
+    <div class="services-title p-4 text-2xl font-bold mb-6">Services</div>
     <nav class="w-full space-y-4">
-
-    
       <button
         v-for="product in products"
         :key="product.id"
         @click="selectService(product)"
-        class="w-full p-4 bg-gray-700 hover:bg-gray-600 rounded-lg opacity-80 transition-colors duration-300"
+        :class="[
+          'w-full p-4 rounded-lg opacity-80 transition-colors duration-300',
+          activeProduct === product.id ? 'bg-gray-600 text-white' : 'bg-gray-700 hover:bg-gray-600 text-[#B99269]'
+        ]"
       >
-        {{ product.title }}
+        {{ product.name }}
       </button>
     </nav>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import axios from 'axios';
+import { useRoute } from 'vue-router';
 
 const products = ref([]);
+const activeProduct = ref(null);
+
+const route = useRoute();
+
+const props = defineProps({
+  activeProductId: Number
+});
 
 const emit = defineEmits(['select-service']);
+
 const selectService = (product) => {
+  activeProduct.value = product.id;
   emit('select-service', product);
 };
 
 onMounted(async () => {
   try {
-    const response = await axios.get('https://dummyjson.com/carts/1');
-    products.value = response.data.products;
+    const response = await axios.get('/services.json');
+    products.value = response.data.services;
+    // Initialize the active product based on the route parameter
+    if (route.params.selectedFeature) {
+      activeProduct.value = parseInt(route.params.selectedFeature, 10);
+    }
   } catch (error) {
     console.error('Error fetching products:', error);
   }
 });
+
+// Watch for route changes
+watch(() => route.params.selectedFeature, (newVal) => {
+  if (newVal) {
+    activeProduct.value = parseInt(newVal, 10);
+  }
+});
+
 </script>
 
 <style scoped>
 .sidebar {
-  min-width: 200px;
-  flex-shrink: 0;
-  transition: all 0.3s ease-in-out;
-  margin-top: 96px;
+  height: auto;
 }
 
-@media (max-width: 1024px) {
-  .sidebar {
-    width: 100%;
-    max-height: 50vh;
+.services-title {
+  margin-top: 20px;
+}
+
+@media (max-width: 640px) {
+  .services-title {
+    margin-top: 40px;
   }
 }
 </style>

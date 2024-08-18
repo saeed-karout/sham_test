@@ -1,61 +1,99 @@
 {
-  "products": [
+  "services": [
     {
       "id": 1,
-      "title": "اعمال التشطيب",
-      "description": "Description for product 1",
-      "images": ["https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D9%82%D8%B5%D8%B1-%D8%A7%D9%84%D8%B5%D9%82%D8%B1%D9%8A-%D8%B4%D8%A8%D9%83%D8%A9-%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-052.jpg"],
-      "thumbnail": "thumbnail1.jpg"
+      "name": "اعمال التشطيب",
+      "description": "يشمل كافة أعمال التشطيب الداخلية والخارجية بجودة عالية وبتصاميم حديثة.",
+      "images": [
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AA%D8%B4%D8%B7%D9%8A%D8%A8-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg",
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AA%D8%B4%D8%B7%D9%8A%D8%A8-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg",
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AA%D8%B4%D8%B7%D9%8A%D8%A8-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg",
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AA%D8%B4%D8%B7%D9%8A%D8%A8-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg",
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AA%D8%B4%D8%B7%D9%8A%D8%A8-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg",
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AA%D8%B4%D8%B7%D9%8A%D8%A8-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg",
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AA%D8%B4%D8%B7%D9%8A%D8%A8-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg",
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AA%D8%B4%D8%B7%D9%8A%D8%A8-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg",
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AA%D8%B4%D8%B7%D9%8A%D8%A8-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg"
+      ],
+      "thumbnail": "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AA%D8%B4%D8%B7%D9%8A%D8%A8-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg"
     },
     {
       "id": 2,
-      "title": "الاعمال الانشائية",
-      "description": "Description for product 2",
-      "images": ["https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D9%82%D8%B5%D8%B1-%D8%A7%D9%84%D8%B5%D9%82%D8%B1%D9%8A-%D8%B4%D8%A8%D9%83%D8%A9-%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-052.jpg"],
-      "thumbnail": "thumbnail2.jpg"
+      "name": "الاعمال الانشائية",
+      "description": "تنفيذ الأعمال الإنشائية بأعلى المعايير الهندسية باستخدام أحدث التقنيات.",
+      "images": [
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/10/%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-1-001-300x148.jpg",
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/10/%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-1-001-300x148.jpg",
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/10/%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-1-001-300x148.jpg"
+      ],
+      "thumbnail": "https://www.shamnet.com.sa/wp-content/uploads/2016/10/%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-1-001-300x148.jpg"
     },
     {
       "id": 3,
-      "title": "الدراسة والتطوير ",
-      "description": "Description for product 2",
-      "images": ["https://www.shamnet.com.sa/wp-content/uploads/2016/09/دراسة-وتطوير-شبكة-الشام-للمقاولات-300x167.jpg"],
-      "thumbnail": "thumbnail2.jpg"
+      "name": "الدراسة والتطوير",
+      "description": "تقديم خدمات الدراسة والتطوير لجميع مراحل المشروع لضمان تحقيق أفضل النتائج.",
+      "images": [
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9-%D9%88%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg",
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9-%D9%88%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg",
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9-%D9%88%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg",
+        "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9-%D9%88%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg"
+      ],
+      "thumbnail": "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%AF%D8%B1%D8%A7%D8%B3%D8%A9-%D9%88%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-300x167.jpg"
     },
     {
       "id": 4,
-      "title": "الابنية الذكية ",
-      "description": "Description for product 2",
-      "images": ["https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D9%82%D8%B5%D8%B1-%D8%A7%D9%84%D8%B5%D9%82%D8%B1%D9%8A-%D8%B4%D8%A8%D9%83%D8%A9-%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-052.jpg"],
-      "thumbnail": "thumbnail2.jpg"
+      "name": "الابنية الذكية",
+      "description": "تصميم وإنشاء المباني الذكية التي تعتمد على أحدث تكنولوجيا التحكم الذكي.",
+      "images": [
+        "https://example.com/images/product4-image1.jpg",
+        "https://example.com/images/product4-image2.jpg",
+        "https://example.com/images/product4-image3.jpg"
+      ],
+      "thumbnail": "https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D8%A7%D9%84%D8%A7%D8%A8%D9%86%D9%8A%D8%A9-%D8%A7%D9%84%D8%B0%D9%83%D9%8A%D8%A9-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-004-300x225.jpg"
     },
     {
       "id": 5,
-      "title": "اعمال الديكور",
-      "description": "Description for product 2",
-      "images": ["https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D9%82%D8%B5%D8%B1-%D8%A7%D9%84%D8%B5%D9%82%D8%B1%D9%8A-%D8%B4%D8%A8%D9%83%D8%A9-%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-052.jpg"],
-      "thumbnail": "thumbnail2.jpg"
+      "name": "اعمال الديكور",
+      "description": "تصميم وتنفيذ الديكورات الداخلية والخارجية بأسلوب عصري وفريد.",
+      "images": [
+        "https://example.com/images/product5-image1.jpg",
+        "https://example.com/images/product5-image2.jpg",
+        "https://example.com/images/product5-image3.jpg"
+      ],
+      "thumbnail": "https://www.shamnet.com.sa/wp-content/uploads/2016/09/اعمال-الديكور-شبكة-الشام-للمقاولات-007-300x225.jpg"
     },
     {
       "id": 6,
-      "title": "اعمال ومتطلبات الدفاع المدني",
-      "description": "Description for product 2",
-      "images": ["https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D9%82%D8%B5%D8%B1-%D8%A7%D9%84%D8%B5%D9%82%D8%B1%D9%8A-%D8%B4%D8%A8%D9%83%D8%A9-%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-052.jpg"],
-      "thumbnail": "thumbnail2.jpg"
+      "name": "اعمال ومتطلبات الدفاع المدني",
+      "description": "تنفيذ كافة متطلبات الدفاع المدني بما يتوافق مع اللوائح والمعايير.",
+      "images": [
+        "https://example.com/images/product6-image1.jpg",
+        "https://example.com/images/product6-image2.jpg",
+        "https://example.com/images/product6-image3.jpg"
+      ],
+      "thumbnail": "https://www.shamnet.com.sa/wp-content/uploads/2016/09/الدفاع-المدني-شبكة-الشام-للمقاولات-008-300x225.jpg"
     },
     {
       "id": 7,
-      "title": "اعمال الزجاج والمرايا وابواب الشاور",
-      "description": "Description for product 2",
-      "images": ["https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D9%82%D8%B5%D8%B1-%D8%A7%D9%84%D8%B5%D9%82%D8%B1%D9%8A-%D8%B4%D8%A8%D9%83%D8%A9-%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-052.jpg"],
-      "thumbnail": "thumbnail2.jpg"
+      "name": "اعمال الزجاج والمرايا وابواب الشاور",
+      "description": "تصنيع وتركيب الزجاج والمرايا وأبواب الشاور بأعلى معايير الجودة.",
+      "images": [
+        "https://example.com/images/product7-image1.jpg",
+        "https://example.com/images/product7-image2.jpg",
+        "https://example.com/images/product7-image3.jpg"
+      ],
+      "thumbnail": "https://www.shamnet.com.sa/wp-content/uploads/2017/03/شبكة-الشام-للمقاولات-15-300x169.jpg"
     },
     {
       "id": 8,
-      "title": "اعمال التشطيب",
-      "description": "Description for product 1",
-      "images": ["https://www.shamnet.com.sa/wp-content/uploads/2016/09/%D9%82%D8%B5%D8%B1-%D8%A7%D9%84%D8%B5%D9%82%D8%B1%D9%8A-%D8%B4%D8%A8%D9%83%D8%A9-%D8%B4%D8%A7%D9%85-%D9%84%D9%84%D9%85%D9%82%D8%A7%D9%88%D9%84%D8%A7%D8%AA-052.jpg"],
-      "thumbnail": "thumbnail1.jpg"
+      "name": "اعمال الزجاج والمرايا وابواب الشاور",
+      "description": "تصنيع وتركيب الزجاج والمرايا وأبواب الشاور بأعلى معايير الجودة.",
+      "images": [
+        "https://example.com/images/product7-image1.jpg",
+        "https://example.com/images/product7-image2.jpg",
+        "https://example.com/images/product7-image3.jpg"
+      ],
+      "thumbnail": "https://www.shamnet.com.sa/wp-content/uploads/2017/03/شبكة-الشام-للمقاولات-15-300x169.jpg"
     }
-    
   ]
 }

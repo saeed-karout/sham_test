@@ -2,14 +2,9 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import piniaPluginPersist from 'pinia-plugin-persist'
-
 import App from './App.vue'
 import router from './router'
-
-// main.js
 import './assets/main.css'
-
-//in your `main.js` file
 import '../node_modules/flowbite-vue/dist/index.css'
 
 
@@ -18,6 +13,15 @@ const app = createApp(App)
 // Create the Pinia instance
 const pinia = createPinia()
 pinia.use(piniaPluginPersist)
+
+
+
+
+
+
+
+
+
 // Use the router
 app.use(router)
 

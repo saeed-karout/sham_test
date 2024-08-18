@@ -73,3 +73,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../assets/fonts/Madani\ Regular.ttf') format('ttf'),
+       url('/assets/fonts/my-custom-font.woff') format('woff'),
+       url('/assets/fonts/my-custom-font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
