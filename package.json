@@ -2,6 +2,11 @@
   "name": "newtest",
   "version": "1.0.0",
   "type": "module",
+  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saeed-karout/sham_test.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
