@@ -94,4 +94,16 @@ export default {
     border-bottom: 4px solid #B99269;
   }
 }
+
+
+@media (max-width: 720px) {
+  /* إعدادات للموبايل */
+  .grid > a {
+    border-top: none;   /* إزالة الحدود العليا */
+    border-right: none; /* إزالة الحدود اليمنى */
+    border-left: none;  /* إزالة الحدود اليسرى */
+    border-bottom: 4px solid #B99269; /* إبقاء الحدود السفلية فقط */
+  }
+}
+
 </style>

@@ -1,5 +1,6 @@
 
 import { createApp } from 'vue'
+
 import { createPinia } from 'pinia'
 import piniaPluginPersist from 'pinia-plugin-persist'
 import App from './App.vue'
@@ -13,12 +14,6 @@ const app = createApp(App)
 // Create the Pinia instance
 const pinia = createPinia()
 pinia.use(piniaPluginPersist)
-
-
-
-
-
-
 
 
 

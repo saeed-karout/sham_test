@@ -54,7 +54,7 @@ export default {
           currentTextIndex.value = (currentTextIndex.value + 1) % texts.length;
           currentText.value = texts[currentTextIndex.value];
           showText.value = true;
-        }, 1000); // نصف ثانية لتخفيف النص الحالي
+        }, 1000); //  ثانية لتخفيف النص الحالي
       }, 5000);
 
       onUnmounted(() => {

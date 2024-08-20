@@ -7,7 +7,7 @@
                       class="flex flex-col items-center max-lg:justify-center min-[500px]:items-center min-[500px]:flex-row gap-8 sm:gap-12 xl:gap-24">
                       <div class="block">
                         <a href="https://pagedone.io/" class="flex justify-center lg:justify-start">
-                      <img src="../assets/logosham.svg" class="w-36"  alt="">
+                      <img src="../../assets/logosham.svg" class="w-36"  alt="">
                   </a>
                       </div>
   

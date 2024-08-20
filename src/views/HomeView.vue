@@ -1,11 +1,11 @@
 <!-- src/components/Home.vue -->
 <script setup>
 import Videos from '@/components/VideoHomeComponent.vue';
-import Service from '@/components/serviceView.vue';
+import Service from '@/components/serviceComponent.vue';
 import ContactView from './ContactView.vue';
 import ProjectsComponents from '@/components/ProjectsComponents.vue';
 import NewsCarousel from '@/components/NewsCarousel.vue';
-import LandingScreen from '@/components/LandingScreen.vue';
+import LandingScreen from '@/components/master/LandingScreen.vue';
 
     import {
         ref,

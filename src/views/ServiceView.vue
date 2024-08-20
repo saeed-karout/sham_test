@@ -10,8 +10,8 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import Sidebar from '@/components/SidebarCom.vue';
-import MainContent from '@/components/MainContentCom.vue';
+import Sidebar from '@/components/services/SidebarCom.vue';
+import MainContent from '@/components/services/MainContentCom.vue';
 import { useRoute } from 'vue-router';
 
 const selectedProduct = ref({

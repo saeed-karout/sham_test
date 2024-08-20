@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch } from 'vue';
+import { ref, onMounted, watch, defineProps, defineEmits } from 'vue';
 import axios from 'axios';
 import { useRoute } from 'vue-router';
 
@@ -26,11 +26,9 @@ const products = ref([]);
 const activeProduct = ref(null);
 
 const route = useRoute();
-
 const props = defineProps({
   activeProductId: Number
 });
-
 const emit = defineEmits(['select-service']);
 
 const selectService = (product) => {
@@ -45,6 +43,9 @@ onMounted(async () => {
     // Initialize the active product based on the route parameter
     if (route.params.selectedFeature) {
       activeProduct.value = parseInt(route.params.selectedFeature, 10);
+    } else if (products.value.length > 0) {
+      // Select the first product by default if no route parameter is present
+      activeProduct.value = products.value[0].id;
     }
   } catch (error) {
     console.error('Error fetching products:', error);
@@ -57,7 +58,6 @@ watch(() => route.params.selectedFeature, (newVal) => {
     activeProduct.value = parseInt(newVal, 10);
   }
 });
-
 </script>
 
 <style scoped>

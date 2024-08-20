@@ -6,7 +6,7 @@
       <button
         v-show="showButton"
         @click="scrollToTop"
-        class="fixed bottom-5 right-4 text-lg p-3 rounded-full shadow-lg transition duration-500"
+        class="fixed bottom-5 left-4 text-lg p-3 rounded-full shadow-lg transition duration-500"
       >
         ↑
       </button>

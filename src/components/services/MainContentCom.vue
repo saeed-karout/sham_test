@@ -19,7 +19,7 @@
         />
       </div>
     </div>
-    <div v-else class="text-red-500">No images available</div>
+    
   </div>
 </template>
 

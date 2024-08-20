@@ -117,7 +117,7 @@ const navigation = [
   { name: 'About us', href: '/about' },
   { name: 'News', href: '/news' },
   { name: 'Contact us', href: '/contact' },
-  { name: 'project',href:'/project'}
+  { name: 'project',href:'/projects'}
 ]
 
 const mobileMenuOpen = ref(false)

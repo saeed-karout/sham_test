@@ -33,7 +33,7 @@
               </div>
             </div>
           </template>
-        </Textarea>
+        </fwb-textarea>
       </form>
       <p class="ml-auto text-xs text-gray-500 dark:text-gray-400">
         Remember, contributions to this topic should follow our

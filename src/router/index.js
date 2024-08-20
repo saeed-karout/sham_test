@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ServiceView from '@/views/ServiceView.vue'
-import ProjectComponent from '@/views/ServiceView.vue'
+import ProjectComponent from '@/views/ProjectsView.vue';
+import ProjectList from '../components/projects/ProjectListComponent.vue'
+import ProjectDetails from '../components/projects/ProjectDetails.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -37,15 +40,26 @@ const router = createRouter({
       component: () => import('../views/NewsView.vue')
     },
     {
-      path: '/project',
+      path: '/projects',
       name: 'Project',
       component: ProjectComponent // تأكد من استخدام المكون الصحيح
     },
-    
+    {
+      path: '/',
+      name: 'ProjectList',
+      component: ProjectList
+    },
+    {
+      path: '/projects/:serviceId',
+      name: 'ProjectList',
+      component: ProjectList,
+      props: true
+    }
+    ,
     {
       path: '/:pathMatch(.*)*',
       name: 'error',
-      component: () => import('../views/errorView.vue')
+      component: () => import('../components/errorView.vue')
     }
   ]
 })
