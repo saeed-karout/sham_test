@@ -4,7 +4,7 @@
     <nav class="flex items-center justify-between p-6 lg:px-8 px-8 dark:bg-gray-800" aria-label="Global">
       <div class="flex lg:flex-1">
         <div>
-           <font-awesome-icon icon="fa-solid fa-house" />
+          
           <router-link to="/">
             <span class="sr-only">S.N.C Company</span>
             <img class="w-32 md:w-32 lg:w-44 h-auto" :src="logoSrc" alt="Company Logo" />

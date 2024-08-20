@@ -3,7 +3,7 @@
         <form action="" method="post" class="pt-10">
             <section class="py-20">
                 <h1 class="text-center mt-10 text-4xl font-bold leading-tight" style="color:#B38E60;">
-                    Contact Us
+                    Contact Us 
                 </h1>
                 <hr class="my-4 mt-8 border-t-2 border-gray-300 dark:border-yellow-500 w-1/3 mx-auto">
                 <div class="mx-auto max-w-7xl mt-5 px-4 sm:px-6 lg:px-8">
