@@ -1,20 +1,24 @@
-import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import vueDevTools from 'vite-plugin-vue-devtools'
+import { fileURLToPath, URL } from 'node:url';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
+import vueDevTools from 'vite-plugin-vue-devtools';
 
-export default defineConfig({
-  plugins: [
-    vue(),
-    vueJsx(),
-    vueDevTools(),
-  ],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
-  },
-  // eslint-disable-next-line no-undef
-  base: process.env.BASE_URL || '/',
-})
+export default defineConfig(({ mode }) => {
+  const isDevelopment = mode === 'development';
+
+  return {
+    plugins: [
+      vue(),
+      vueJsx(),
+      // Conditionally include devtools plugin in development mode
+      isDevelopment && vueDevTools(),
+    ].filter(Boolean),
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+      },
+    },
+    base: process.env.VITE_BASE_URL || '/',
+  };
+});
